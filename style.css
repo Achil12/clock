@@ -1,0 +1,85 @@
+/* Menyembunyikan scrollbar dan mengatur tinggi penuh */
+html, body {
+    overflow: hidden; /* Menyembunyikan scrollbar */
+    height: 100%; /* Mengatur tinggi penuh */
+}
+
+/* Gaya umum untuk body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Latar belakang hitam */
+    color: #fff; /* Teks putih */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Bayangan putih */
+}
+
+/* Gaya untuk jam */
+.clock {
+    background: rgba(255, 255, 255, 0.1); /* Latar belakang transparan putih */
+    border: 3px solid #fff; /* Border putih */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Bayangan putih */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.clock:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+/* Gaya untuk jam dan tanggal */
+h1 {
+    margin: 0;
+    font-size: 80px;
+    color: #fff; /* Teks putih untuk jam */
+}
+
+#date {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #fff; /* Teks putih untuk tanggal */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Bayangan putih */
+}
+
+/* Gaya untuk tombol toggle dan fullscreen */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #fff; /* Latar belakang tombol putih */
+    color: #000; /* Teks tombol hitam */
+    transition: background-color 0.3s, color 0.3s; /* Transisi untuk tombol */
+}
+
+button:hover {
+    background-color: #ccc; /* Warna latar belakang tombol saat hover */
+}
+
+/* Gaya untuk mode gelap */
+body.dark-mode {
+    background-color: #121212; /* Latar belakang gelap */
+    color: #fff; /* Teks putih */
+}
+
+body.dark-mode .clock {
+    background: rgba(255, 255, 255, 0.2); /* Latar belakang transparan lebih gelap */
+    border: 3px solid #bbb; /* Border abu-abu */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Bayangan lebih lembut */
+}
+
+body.dark-mode button {
+    background-color: #333; /* Latar belakang tombol gelap */
+    color: #fff; /* Teks tombol putih */
+}
+
+body.dark-mode button:hover {
+    background-color: #444; /* Warna latar belakang tombol saat hover di mode gelap */
+}
